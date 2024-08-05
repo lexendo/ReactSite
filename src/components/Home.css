@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1vw;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 4vw;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    
+
+    text-shadow: 2vw 2vw 4vw rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease-in-out;
+}
+.name:hover, .slogan:hover, .poweredBy:hover {
+  transform: scale(1.1);
+}
+  .slogan {
+    display: inline-block;
+    font-size: 1.5vw;
+    color: #cccccc;
+    font-style: italic;
+    /*margin-bottom: 8rem;*/
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid orange;
+    max-width: 0;
+  
+    animation: typing 5s forwards, blink 1s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 100%; /* Animate to the full width of the content */
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  
+  .poweredBy {
+    font-size: 1.2vw;
+    color: #a9a9a9;
+    text-transform: uppercase;
+    letter-spacing: 0.15vw;
+    margin-bottom: 1vw;
+    margin-left: 17vw;
+    margin-right: 17vw;
+    display: inline-block
+  }
+
+
+  
+  .logo {
+    height: 10vh;
+    padding: 1.5vw;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2vh #646cffaa);
+    transform: scale(1.05);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2vh #61dafbaa);
+  }
+  .logo.html:hover {
+    filter: drop-shadow(0 0 2vh #e34f26aa);
+  }
+  .logo.css:hover {
+    filter: drop-shadow(0 0 2vh #3DAAFAbb);
+  }
+  .logo.typescript:hover {
+    filter: drop-shadow(0 0 2vh #007acc);
+  }
+  
+  @keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.logo.react {
+    animation: logo-spin infinite 20s linear;
+}
+
+.hackerPhoto {
+    width: 30vw;
+}
+  
